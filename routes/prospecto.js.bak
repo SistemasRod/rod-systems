@@ -20,7 +20,7 @@ router.post('/prospecto', async(req, res) => {
         const prospectoDB = await Prospecto.create(body)
         res.json(prospectoDB)
     } catch (error) {
-        return res.status(500).json({
+        return res.status(400).json({
             mensaje: 'Ocurrio un error',
             error
         })
@@ -39,7 +39,7 @@ router.get('/prospecto', verificarAuth, async(req, res)=>{
         const totalProspectos = await Prospecto.find().countDocuments();
         res.json({prospectoDB, totalProspectos});
     } catch (error) {
-        return res.status(500).json({
+        return res.status(400).json({
             mensaje: 'Ocurrio un error al obtener los prospectos',
             error
         })

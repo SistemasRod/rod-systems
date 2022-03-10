@@ -8,6 +8,7 @@ const categoria = {
     values: [
         'Regalos dia de las madres', 
         'Regalos dia del padre', 
+        
         'Reconocimientos', 
         'Quinquenios',
         'Regalos a clientes',

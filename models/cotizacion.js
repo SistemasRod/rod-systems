@@ -23,7 +23,7 @@ const cotizacionSchema = new Schema({
     empresa: {type: String, required: [true, 'La empresa es obligatoria']},
 
     presupuesto: {type: String, required:[true, 'Presupuesto obligatorio']},
-    personas: {type: Number, required:[true, 'Cantidad de personas necesario']},
+    personas: {type: String, required:[true, 'Cantidad de personas necesario']},
     entrega: {type: Date, default: Date.now},
     receptor: {type: String, default: 'OTROS', enum: receptores},
     regalo: {type: String, default: 'OTROS', enum: regalos},
